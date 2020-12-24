@@ -1,10 +1,9 @@
-Apart from Backend developers, the Database may seem to be a very complicated thing in another Developer's coding life. But, to me,  this is a misunderstanding. In this article, we will prove how easy it is to work with Maria Database with only SQL and PHP knowledge.
-
+The Database seems to be a very complicated thing in a Developer's coding life. But, to me,  this is a misunderstanding. In this article, we will prove how easy it is to work with Maria Database with only SQL and PHP knowledge.
 ### Prerequisites
 To use this tutorial you need to ;
 - have `HTML` and `CSS` knowledge
 - have a working code editor live visual studio code
-- be a user with sudo privilege
+- be a user with Sudo privilege
 - access to terminal/command line
 
 In this article you will learn how to;
@@ -13,7 +12,6 @@ In this article you will learn how to;
 - create a registration form using `CSS`,  and `HTML` 
 - store data from the registration form into the database
 - fetch saved data from the Database  
-
 ### Step 1: Installing Xampp
 Xampp comes along with PhpMyAdmin when downloaded into a machine.  PhpMyAdmin is the MariaDatabase that we will be working on within this article.
 
@@ -28,7 +26,7 @@ To make this package executable, you need to open the terminal (Ctrl+alt+T) and 
 $ cd /home/[username]/Downloads
 
 ```
-2. Run the chmod command to make the package file executable using this command.
+2. Run the Chmod command to make the package file executable using this command.
 
 sudo chmod 755 [package name] 
 
@@ -36,9 +34,9 @@ The  Xampp version may differ. In my case I have then following;
 ```bash
 $ sudo chmod 755 xampp-linux-x64-7.4.10-0-installer.run
 ```
- Navigate to your package and copy and paste the file name like the one we have above and this will make your work easier.
+ Navigate to your package and copy the file name like the one we have above and then paste it into the terminal.
 
-3. When you enter the above command you will not see anything from the terminal that you have performed that step successfully. However, we need to verify that we have executed the permission with the command below:
+3. With the above command, the terminal will not output anything. Verify that we have executed the permission with the command below:
 ```bash
 $  ls -l xampp-linux-x64-7.4.10-0-installer.run
 ```
@@ -58,27 +56,26 @@ $ sudo ./xampp-linux-x64-7.4.10-0-installer.run
 ### . Select Components dialogue
 1. You should click ``Next`` in the above image and Select Components dialogue. You should choose either XAMPP Core Files or Xampp Developer Files and install. You may keep the default setting and proceed with ``Next``
 
-2. The Setup will show you the location where the software will be installed after selecting the components. The location should be `/opt/lampp`. Click `Next` to proceed.
+2. The Setup will show you where the software will be installed. The location should be `/opt/lampp`. Click `Next` to proceed.
 
 3. After clicking next, you should see a dialogue box installing applications. Uncheck  ``Learn more about Bitnami for XAMPP`` to deny and click ``Next``.
 
 4. The Wizard is now ready to install Xampp. Start the installation by clicking ``Next``.
 
-5. The Installation process should start immediately and progress in a dialogue box should appear on the screen as shown below:
+5. The Installation process should start immediately as in the figure below.
 ![XAMPP Setup Wizard](img2.png)
 
 ### . Launching Xampp
-When you click next,  Xampp control panel will be displayed on the screen as in the figure below:
+When you click next, the Xampp control panel will be displayed on the screen as in the figure below:
 ![XAMPP Setup Wizard](img3.png)
-In the Manage Serves tab make sure that all available services are learning by selecting ``Start``
-
+In the Manage Serves tab, click ``Start`` to start all the services.
 ### . Verifying that XAMPP is running
-Here we are going to verify that we have successfully installed two things. The `localhost` and the `MariaDB`
+Here we are going to verify that we have installed two things. The `localhost` and the `MariaDB`
 1. For localhost enter the following URL in a browser: http://localhost/dashboard
-If You see an image similar to the one below, the Xampp  installed on your machine.
+If You see an image like the one below, the Xampp is installed in your machine.
 ![localhost dashboard](img4.png)
 2. For MariaDB open the URL: http://localhost/phpmyadmin/
-If the installation was successful, you should have your screen displaying the following output.
+Your should have something like this.
 ![lacalhost phpmyadmin](img4.png)
 
 ### Step 2: Creating tables in MariaDB using SQL commands in the terminal.
@@ -130,7 +127,7 @@ desc students;
 The output should be as this image below;
 ![database](table.png)
 
-So far, we have created a `database school` and we have also created `tables` inside the school Database via terminal. Now, let's view this database school and its tables in the MariaDB. When you open the URL: http://localhost/phpmyadmin/  you should have an image like this.
+So far, we have created a `database school` and  `tables` inside the school Database via terminal. Now, let's view this database school and its tables in the MariaDB. When you open the URL: http://localhost/phpmyadmin/  you should have an image like this.
 
 ![database](database.png)
 
@@ -155,7 +152,7 @@ To create the first file, type
 ```bash
 $ sudo nano index.php
 ```
-After clicking enter, a page with the title `index.php` will be opened. Since this is not the best place to have our `index.php` code we will close this page and use another suitable code editor. To close click(ctrl+O)followed by (ctrl+enter) followed by(ctrl+x). This will take you back to the terminal.
+After clicking enter, a page with the title `index.php` will open. Close this page and use another suitable code editor. To close click(ctrl+O)followed by (ctrl+enter) followed by(ctrl+x). This will take you back to the terminal.
 
 Create a second file;
 ```bash
@@ -244,11 +241,11 @@ $sql = mysqli_query($conn, $sql);
 // $sql conditions which will be displayed after clicking save button
 if($sql == true)
 {
- echo "records saved successfully";
+ echo "Records saved";
 }
 else
 {
- echo "Records saved  unsuccessfully";
+ echo "Records not saved  ";
 }
 
 ?> 
@@ -264,7 +261,7 @@ Lastname-James
 Email- peterjames@gmail.com
 
 Phone-0700000067
-When we call http://localhost/phpmyadmin/ on the browser and open `school/students` we should have something like this;
+When we call http://localhost/phpmyadmin/ on the browser we should have something like this in our data.
 ![database2](database2.png)
 
 ### Step 5: Fetching data from the Database
