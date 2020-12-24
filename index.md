@@ -1,4 +1,4 @@
-Apart from Backend developers,Database may seem to be a very complicated thing in a other Developer's coding live.However,to me this is just a mis-understanding. In this article we will prove how easy it is to work with Maria Database with only SQL and PHP knowledge.
+Apart from Backend developers, the Database may seem to be a very complicated thing in a other Developer's coding live. However, to me this is just a misunderstanding. In this article we will prove how easy it is to work with Maria Database with only SQL and PHP knowledge.
 
 ### Prerequisites
 To use this tutorial you need to ;
@@ -17,11 +17,11 @@ In this article you will learn how to;
 ### Step 1: Installing Xampp
 Xampp comes along with PhpMyAdmin when downloaded into a machine.  PhpMyAdmin is the MariaDatabase that we will be working with in this article.
 
-To install xampp you need to;
+To install Xampp you need to;
 ### . Download the package to be installed.
-Downloading the package is always the first step you need to do when installing xampp.You can download the package [Here](https://www.apachefriends.org/download.html). Download latest version Xampp for linux and start installation.Very easy.
+Downloading the package is always the first step you need to do when installing xampp. You can download the package [Here](https://www.apachefriends.org/download.html). Download latest version Xampp for linux and start installation. Very easy.
 ### . Give the package permission so that it can be executable
-To make this package executable,you need to Open the terminal (Ctrl+alt+T) and follow the following;
+To make this package executable, you need to Open the terminal (Ctrl+alt+T) and follow the following;
 
 1. Move to where your package is located. In my case it is in Downloads folder and so I will navigate to downloads folder using this command:
 ```bash
@@ -32,23 +32,23 @@ $ cd /home/[username]/Downloads
 
 sudo chmod 755 [package name] 
 
-The  xampp version may differ. In my case I have then following;
+The  Xampp version may differ. In my case I have then following;
 ```bash
 $ sudo chmod 755 xampp-linux-x64-7.4.10-0-installer.run
 ```
-Just navigate to where your package is and  copy and paste the file name like the one we have above and this will make your work easier.
+Just navigate to  your package and  copy and paste the file name like the one we have above and this will make your work easier.
 
-3. When you enter the above command you will not see anything from the terminal that you have performed that step successfully.However,we need to verify that we have executed the permission with the command below:
+3. When you enter the above command you will not see anything from the terminal that you have performed that step successfully. However, we need to verify that we have executed the permission with the command below:
 ```bash
 $  ls -l xampp-linux-x64-7.4.10-0-installer.run
 ```
-Here, this is the output that you will get
+Here, this is the output you will get.
 ```bash
 -rwxrwxrwx 1 [username] [username] 157293721 Sep 12 22:23 xampp-linux-x64-7.4.10-0-installer.run
 ```
 The username above is the user who can execute the file.
 ### . Launch  Setup Wizard
-1. Its  now time to run the installer and launch the setup wizard.To do  that use the following command:
+1. Its  now time to run the installer and launch the setup wizard. To do this , use the following command:
 ```bash
 $ sudo ./xampp-linux-x64-7.4.10-0-installer.run
 ```
@@ -56,7 +56,7 @@ $ sudo ./xampp-linux-x64-7.4.10-0-installer.run
 ![XAMPP Setup Wizard](img1.png)
 
 ### . Select Components dialogue
-1. You should click ``Next`` in the above image and Select Components dialogue.You should choose either XAMPP Core Files or Xampp Developer Files and instal.You may keep the default setting and proceed with the ``Next``
+1. You should click ``Next`` in the above image and Select Components dialogue.You should choose either XAMPP Core Files or Xampp Developer Files and instal.You may keep the default setting and proceed with ``Next``
 
 2. The Setup will show you  the location where software will be installed after selecting the components. The location should be `/opt/lampp`. Click `Next` to proceed.
 
@@ -68,7 +68,7 @@ $ sudo ./xampp-linux-x64-7.4.10-0-installer.run
 ![XAMPP Setup Wizard](img2.png)
 
 ### . Launching Xampp
-When you click next above, Xampp control panel will be displayed on the screen as in the figure below:
+When you click next , Xampp control panel will be displayed on the screen as in the figure below:
 ![XAMPP Setup Wizard](img3.png)
 In the Manage Serves tab make sure that all available services are learning by selecting ``Start``
 
@@ -93,9 +93,9 @@ The terminal will ask you for password, just click enter as we have not set any 
 When you click enter you should have the following output;
 ![database](maria.png)
 
-In the above diagram, it means that your now  working on MariaDatabase.
+In the above diagram, it means that your now  working on the MariaDatabase.
 
-The next thing to do is to create a Database. Lets create a database called school. Do to this, type;
+The next thing to do is to create a Database. Lets create a Database called school. Do to this, type;
 ```bash
 create database school;
 ```
@@ -106,9 +106,9 @@ To confirm that you have successfully created database school, use this command;
 ```bash
 show databases;
 ```
-The terminal should display  `Database` school since this is the only database we we have.
+The terminal should display  `Database` `school`  only since this is the only `Database` we have.
 
-Now lets navigate inside `database school` and create tables. To do this we wii use SQL command `use`. Type;
+Now lets navigate inside `database school` and create tables. To do this, we wii use SQL command `use`. Type;
 ```bash
  use school;
 ```
@@ -161,7 +161,7 @@ Create a second file;
 ```bash
 $ sudo nano connect.php
 ```
-2. Open test folder using your favorite code editor and enter the following in `index.php`
+2. Open ```test``` folder using your favorite code editor and enter the following in `index.php`.
 ```html
 <!DOCTYPE html>
 <html>
@@ -190,7 +190,7 @@ $ sudo nano connect.php
 </body>
 </html>
 ```
-To style the form above enter the following code after the closing form. i.e after `</form>`
+To style the form above enter the following code after `</form>`
 ```css
 <styles>
 body
@@ -205,7 +205,7 @@ body
   }
 </styles>
 ```
-When you open the URL: http://localhost/test ,you should have a page like this on your browser;
+When you open the URL: http://localhost/test , you should have a page like this on your browser;
 ![form](test.png)
 3. Now we connect our form with the database. Inside connect.php enter this code;
 ```php
@@ -253,8 +253,7 @@ else
 
 ```
 ### Step 4: Storing data into the database
-If we fill our form with the below details and save,
-our school database should change accordingly.
+If we fill our form with the below details and save, our ``school database ``should change accordingly.
 
 Firstname-Peter
 
@@ -264,7 +263,7 @@ Email- peterjames@gmail.com
 
 Phone-0700000067
 
-When, we will call http://localhost/phpmyadmin/ on the browser, and open `school/students` we should have something like this;
+When we call http://localhost/phpmyadmin/ on the browser, and open `school/students` we should have something like this;
 ![database2](database2.png)
 
 ### Step 5: Fetching data from database
@@ -272,7 +271,7 @@ To fetch data that we have saved, we will add some code inside ``index.php``. Th
 ```php
 //
 <br> <br>
-    // Creating a table where data from database will be store
+    // Creating a table where data from database will be stored
      <h3>Fetching Data from database</h3>
      <table align="center" style="width:300px;">
         <tr>
