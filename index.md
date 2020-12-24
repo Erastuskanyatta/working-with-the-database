@@ -1,4 +1,5 @@
-The Database seems to be a very complicated thing in a Developer's coding life. But, to me,  this is a misunderstanding. In this article, we will prove how easy it is to work with Maria Database with only SQL and PHP knowledge.
+### Creating, Connecting, Storing, and fetching data from MariaDatabase using PHP 
+Working with the Database seems to be a very complicated thing in a Developer's coding life. But to me, this is not the case. In this article, we will prove how easy it is to work with MariaDatabase with only SQL and PHP knowledge.
 ### Prerequisites
 To use this tutorial you need to ;
 - have `HTML` and `CSS` knowledge
@@ -9,9 +10,9 @@ To use this tutorial you need to ;
 In this article you will learn how to;
 - install Xampp
 - create  tables in Database using SQL commands
-- create a registration form using `CSS`,  and `HTML` 
+- create a registration form using 
 - store data from the registration form into the database
-- fetch saved data from the Database  
+- fetch the saved data from the Database  
 ### Step 1: Installing Xampp
 Xampp comes along with PhpMyAdmin when downloaded into a machine.  PhpMyAdmin is the MariaDatabase that we will be working on within this article.
 
@@ -26,9 +27,7 @@ To make this package executable, you need to open the terminal (Ctrl+alt+T) and 
 $ cd /home/[username]/Downloads
 
 ```
-2. Run the Chmod command to make the package file executable using this command.
-
-sudo chmod 755 [package name] 
+2. Run the Chmod command (sudo chmod 755 [package name] )to make the package file executable.
 
 The  Xampp version may differ. In my case I have then following;
 ```bash
@@ -60,7 +59,7 @@ $ sudo ./xampp-linux-x64-7.4.10-0-installer.run
 
 3. After clicking next, you should see a dialogue box installing applications. Uncheck  ``Learn more about Bitnami for XAMPP`` to deny and click ``Next``.
 
-4. The Wizard is now ready to install Xampp. Start the installation by clicking ``Next``.
+4. Xampp is now ready to be installed by the Wizard. Start the installation by clicking ``Next``.
 
 5. The Installation process should start immediately as in the figure below.
 ![XAMPP Setup Wizard](img2.png)
@@ -75,8 +74,9 @@ Here we are going to verify that we have installed two things. The `localhost` a
 If You see an image like the one below, the Xampp is installed in your machine.
 ![localhost dashboard](img4.png)
 2. For MariaDB open the URL: http://localhost/phpmyadmin/
-Your should have something like this.
-![lacalhost phpmyadmin](img4.png)
+Your browser should look like this;
+![localhost phpmyadmin](database3.png)
+Note: In your database, you should have only one Database called school if it is your first Database.
 
 ### Step 2: Creating tables in MariaDB using SQL commands in the terminal.
 Now that we have our environment working, we can start working with the MariaDB. 
@@ -252,7 +252,7 @@ else
 
 ```
 ### Step 4: Storing data into the database
-If we fill our form with the below details and save it, our ``school database ``shoud have the same detailsl.
+If we fill our form with the below details and save it, our ``school database ``should have the same details.
 
 Firstname-Peter
 
@@ -261,6 +261,7 @@ Lastname-James
 Email- peterjames@gmail.com
 
 Phone-0700000067
+
 When we call http://localhost/phpmyadmin/ on the browser we should have something like this in our data.
 ![database2](database2.png)
 
@@ -317,4 +318,3 @@ On refreshing the page, ( http://localhost/test) we have;
 
 ### Conclusion
 From this article, we have learned that working with a Database is as easier as working with any other code. and we have concluded that it is a myth to say that Database is the only meant for backend expert only.
-
