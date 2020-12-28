@@ -3,7 +3,7 @@ Working with the Database seems to be a very complicated thing in a Developer's 
 ### Prerequisites
 To use this tutorial you need to ;
 - have `HTML` and `CSS` knowledge
-- have a working code editor live visual studio code
+- have a working code editor live visual studio code. Download it [here](https://code.visualstudio.com/download).
 - be a user with Sudo privilege
 - access to terminal/command line
 
@@ -18,7 +18,7 @@ Xampp comes along with PhpMyAdmin when downloaded into a machine.  PhpMyAdmin is
 
 To install Xampp you need to;
 ### . Download the package to be installed.
-Downloading the package is always the first step you need to do when installing Xampp. You can download the package [Here](https://www.apachefriends.org/download.html). Download the latest version of Xampp for Linux and start the installation. Very easy.
+Downloading the package is always the first step you need to do when installing Xampp. You can download the package [here](https://www.apachefriends.org/download.html). Download the latest version of Xampp for Linux and start the installation. Very easy.
 ### . Give the package permission so that it can be executable
 To make this package executable, you need to open the terminal (Ctrl+alt+T) and follow the following;
 
@@ -76,7 +76,8 @@ If You see an image like the one below, the Xampp is installed in your machine.
 2. For MariaDB open the URL: http://localhost/phpmyadmin/
 Your browser should look like this;
 ![localhost phpmyadmin](database3.png)
-Note: In your database, you should have only one Database called school if it is your first Database.
+Note: In your Database, you should not have any databases as your yet to create one.
+
 
 ### Step 2: Creating tables in MariaDB using SQL commands in the terminal.
 Now that we have our environment working, we can start working with the MariaDB. 
@@ -130,7 +131,7 @@ The output should be as this image below;
 So far, we have created a `database school` and  `tables` inside the school Database via terminal. Now, let's view this database school and its tables in the MariaDB. When you open the URL: http://localhost/phpmyadmin/  you should have an image like this.
 
 ![database](database.png)
-
+Note: In your database, you should have only one Database called school if it is your first Database.
 ### Step 3: Creating a registration form
 1. Here, we will create a form and store the details of that form in our database.
 
@@ -315,6 +316,6 @@ To fetch data that we have saved, we will add some code inside ``index.php``. Th
 ```
 On refreshing the page, ( http://localhost/test) we have;
 ![database2](img5.png)
-
+The data at the bottom of the page have been fetched from the database.
 ### Conclusion
 From this article, we have learned that working with a Database is as easier as working with any other code. and we have concluded that it is a myth to say that Database is the only meant for backend expert only.
