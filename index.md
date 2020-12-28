@@ -318,4 +318,4 @@ On refreshing the page, ( http://localhost/test) we have;
 ![database2](img5.png)
 The data at the bottom of the page have been fetched from the database.
 ### Conclusion
-From this article, we have learned that working with a Database is as easier as working with any other code. and we have concluded that it is a myth to say that Database is the only meant for backend expert only.
+From this article, we have learned that working with a Database is as easier as working with any other code. and we have concluded that it is a myth to say that Database is the only meant for backend expert only
